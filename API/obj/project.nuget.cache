@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K/Vr3rF4KmUzmvKpJKWp5FT67jvc4PfglBruyJH6oqgOkUfeaDr4HMdya9raUp5cA3q+/SwcS4l1hcJtW/AaHg==",
+  "dgSpecHash": "b2CYfL2FCX0QLCt3TWxh4Cr9fHYI5X1xKM8DPcRH4lF8y1ZnZmzUR66CKTc5dzVzN0/+dIcgYunHwT8Hq9ezQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\david.dunn\\source\\repos\\DatingApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\david.dunn\\source\\repos\\DatingApp\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david.dunn\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\david.dunn\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

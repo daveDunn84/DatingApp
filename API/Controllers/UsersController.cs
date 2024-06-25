@@ -1,6 +1,7 @@
 ﻿using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
@@ -16,18 +17,20 @@ public class UsersController : ControllerBase
         _context = context;
     }
 
+    // we made this async because it is best practice to offload these types of database
+    // queries to a delegate
     [HttpGet]
-    public ActionResult<IEnumerable<AppUser>> GetUsers()
+    public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
-        var users = _context.Users.ToList();
+        var users = await _context.Users.ToListAsync();
 
         return users; // the framework will return the correct http response in this case
     }
 
     [HttpGet("{id}")] // /api/users/2
-    public ActionResult<AppUser> GetUser(int id)
+    public async Task<ActionResult<AppUser>> GetUser(int id)
     {
-        return _context.Users.Find(id);
+        return await _context.Users.FindAsync(id);
         // note that the context will track the entity and return if found, otherwise it will
         // query the database, then update the context and return the data
     }
